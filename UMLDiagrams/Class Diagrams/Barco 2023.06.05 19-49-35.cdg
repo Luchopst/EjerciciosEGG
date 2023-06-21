@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Barco">
+  <ClassDiagramComponents>
+    <Class name="Barco" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="protected"/>
+        <Field name="matricula" type="int" visibility="protected"/>
+        <Field name="eslora" type="double" visibility="protected"/>
+        <Field name="anioFabricacion" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatricula" returnType="int" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="int" name="matricula"/>
+        </Method>
+        <Method name="getEslora" returnType="double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="getAnioFabricacion" returnType="int" visibility="public"/>
+        <Method name="setAnioFabricacion" returnType="void" visibility="public">
+          <Argument type="int" name="anioFabricacion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+        <Method name="crearBarco" returnType="Barco" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidad.Barco" target="Entidad.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

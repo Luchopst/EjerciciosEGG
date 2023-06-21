@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="carta" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="palo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="numero"/>
+          <Argument type="String" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="getPalo" returnType="String" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="String" name="palo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CartaService" package="Service" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="private"/>
+        <Field name="Descarte" type="ArrayList&lt;carta&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearMazo" returnType="ArrayList&lt;carta&gt;" visibility="public"/>
+        <Method name="Barajar" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+        <Method name="siguienteCarta" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+        <Method name="cartasDisponibles" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+        <Method name="darCartas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+        <Method name="cartasMonton" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+        <Method name="mostrarBaraja" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+        <Method name="menu" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;carta&gt;" name="Mazo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JuegoDeCartas" package="Main" visibility="public" xPosition="150.0" yPosition="426.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Service.CartaService" target="Entidad.carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Descarte" source="Service.CartaService" target="Entidad.carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;carta&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
